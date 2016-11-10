@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_menu_home"
+            android:title="홈메뉴" />
+        <item
+            android:id="@+id/nav_note"
+            android:icon="@drawable/ic_menu_note"
+            android:title="출석" />
+        <item
+            android:id="@+id/nav_member"
+            android:icon="@drawable/ic_menu_member"
+            android:title="회원관리" />
+        <item
+            android:id="@+id/nav_class"
+            android:icon="@drawable/ic_menu_class"
+            android:title="과목관리" />
+        <item
+            android:id="@+id/nav_fee"
+            android:icon="@drawable/ic_menu_fee"
+            android:title="수강료관리" />
+        <item
+            android:id="@+id/nav_signup"
+            android:icon="@drawable/ic_menu_signup"
+            android:title="수강관리" />
+        <item
+            android:id="@+id/nav_msg"
+            android:icon="@drawable/ic_menu_msg"
+            android:title="메세지관리" />
+        <item
+            android:id="@+id/nav_student"
+            android:icon="@drawable/ic_menu_student"
+            android:title="출석부관리" />
+    </group>
+
+    <!--<item android:title="Communicate">-->
+        <!--<menu>-->
+            <!--<item-->
+                <!--android:id="@+id/nav_share"-->
+                <!--android:icon="@drawable/ic_menu_class"-->
+                <!--android:title="Share" />-->
+            <!--<item-->
+                <!--android:id="@+id/nav_send"-->
+                <!--android:icon="@drawable/ic_menu_member"-->
+                <!--android:title="Send" />-->
+        <!--</menu>-->
+    <!--</item>-->
+
+</menu>

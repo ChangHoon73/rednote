@@ -1,0 +1,20 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingTop="5dp">
+
+    <EditText
+        android:id="@+id/ml_txt_member"
+        android:layout_width="270dp"
+        android:layout_height="40dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/edit_line" />
+
+    <Button
+        android:id="@+id/ml_btn_member"
+        android:layout_width="wrap_content"
+        android:layout_height="42dp"
+        android:background="@drawable/btn_green"
+        android:text="검색" />
+</LinearLayout>

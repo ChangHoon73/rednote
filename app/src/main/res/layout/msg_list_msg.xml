@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:text="출석"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ml_txt_sub"
+        android:layout_weight="2"/>
+
+    <TextView
+        android:text="등원했습니다"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ml_txt_con"
+        android:layout_weight="1"/>
+</LinearLayout>

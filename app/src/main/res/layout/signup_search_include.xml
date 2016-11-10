@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/sl_spin_select"
+            android:layout_width="70dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/edit_line" />
+
+        <EditText
+            android:id="@+id/sl_etxt_search"
+            style="@style/editTheme"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/edit_line"
+            android:hint="검색할 내용" />
+
+        <Button
+            android:id="@+id/sl_btn_search"
+            android:layout_width="70dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/btn_green"
+            android:text="검색"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/sl_linear_checkl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="180dp">
+
+        <CheckBox
+            android:id="@+id/sl_check_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="년도별" />
+
+        <CheckBox
+            android:id="@+id/sl_check_month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="월별" />
+
+        <CheckBox
+            android:id="@+id/sl_check_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="일별" />
+    </LinearLayout>
+</LinearLayout>
