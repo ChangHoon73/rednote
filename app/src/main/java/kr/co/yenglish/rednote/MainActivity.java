@@ -12,6 +12,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 import kr.co.yenglish.rednote.classes.ClassListFragment;
 import kr.co.yenglish.rednote.fee.FeeListFragment;
@@ -21,6 +22,7 @@ import kr.co.yenglish.rednote.member.MemberListFragment;
 import kr.co.yenglish.rednote.msg.MsgListFragment;
 import kr.co.yenglish.rednote.note.NoteListFragment;
 import kr.co.yenglish.rednote.signup.SignupListFragment;
+import kr.co.yenglish.rednote.util.Utils;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -32,6 +34,8 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+
 
         fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -54,8 +58,18 @@ public class MainActivity extends AppCompatActivity
 
         navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
+        View header=navigationView.getHeaderView(0);
+        TextView user_txt = (TextView) header.findViewById(R.id.user_txt);
+        String name = Utils.getStringPreference(this, "name").toString();
+        Utils.log("name:"+name);
+        user_txt.setText(name + " LogOut ");
         //View layoutid = this.findViewById(R.id.includeid);
+        user_txt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                MainActivity.this.finish();
+            }
+        });
     }
 
     @Override

@@ -62,7 +62,7 @@ public class CommunicationUtils {
                 int depth = jArray.get(0).getAsJsonObject().get("depth").getAsInt();
                 isSucess = true;
                 Utils.setStringPreference(mContext, "uid", uid);
-                Utils.setStringPreference(mContext, "name", name);
+                Utils.setStringPreference(mContext, "name", ParseUtils.deleteQuatationFromJson(name));
                 Utils.setIntegerPreference(mContext, "depth", depth);
 
             }else{
