@@ -1,89 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:padding="30dp">
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:padding="10dp">
+        android:orientation="horizontal">
+
         <ImageButton
-            android:layout_width="150dp"
-            android:layout_height="150dp"
             android:id="@+id/mf_imgbtn_01"
-            android:src="@drawable/btn_note"
-            android:padding="0dp"
-            android:layout_marginRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
             android:background="@drawable/rounded_bg"
-            />
+            android:padding="0dp"
+            android:src="@drawable/btn_note" />
+
         <ImageButton
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:padding="0dp"
-            android:src="@drawable/btn_studentbook"
+            android:id="@+id/mf_imgbtn_02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
             android:background="@drawable/rounded_bg"
-            android:id="@+id/mf_imgbtn_02"/>
+            android:padding="0dp"
+            android:src="@drawable/btn_studentbook" />
     </LinearLayout>
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp">
-        <Button
-            android:text="회원관리"
-            android:textSize="20dp"
-            android:textColor="@color/white"
-            android:background="@drawable/btn_mint"
-            android:textStyle="bold"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:id="@+id/mf_btn_01"/>
-        <Button
-            android:text="과목등록"
-            android:textSize="20dp"
-            android:textColor="@color/white"
-            android:background="@drawable/btn_mint"
-            android:textStyle="bold"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:id="@+id/mf_btn_02"/>
-        <Button
-            android:text="수강등록"
-            android:textSize="20dp"
-            android:textColor="@color/white"
-            android:background="@drawable/btn_mint"
-            android:textStyle="bold"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:id="@+id/mf_btn_03"/>
-        <Button
-            android:text="수강료관리"
-            android:textSize="20dp"
-            android:textColor="@color/white"
-            android:background="@drawable/btn_mint"
-            android:textStyle="bold"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:id="@+id/mf_btn_04"/>
-        <Button
-            android:text="메세지관리"
-            android:textSize="20dp"
-            android:textColor="@color/white"
-            android:background="@drawable/btn_mint"
-            android:textStyle="bold"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/mf_btn_05"/>
+        android:gravity="center"
+        android:orientation="vertical">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <Button
+                android:id="@+id/mf_btn_01"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/btn_mint"
+                android:text="회원관리"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/mf_btn_02"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/btn_mint"
+                android:text="과목등록"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/mf_btn_03"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/btn_mint"
+                android:text="수강등록"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/mf_btn_04"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/btn_mint"
+                android:text="수강료관리"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/mf_btn_05"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_mint"
+                android:text="메세지관리"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
     </LinearLayout>
 
 </LinearLayout>

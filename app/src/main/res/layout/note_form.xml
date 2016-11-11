@@ -25,22 +25,22 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:padding="10dp"
         android:layout_marginBottom="50dp">
 
         <EditText
             android:layout_width="wrap_content"
-            android:layout_height="70dp"
+            android:layout_height="wrap_content"
             android:inputType="numberPassword"
             android:ems="10"
             android:id="@+id/nf_edittxt_01"
             android:layout_weight="1"
             android:layout_marginRight="10dp"
             android:background="@drawable/edit_line"
+
             />
         <EditText
             android:layout_width="wrap_content"
-            android:layout_height="70dp"
+            android:layout_height="wrap_content"
             android:inputType="numberPassword"
             android:ems="10"
             android:id="@+id/nf_edittxt_02"
@@ -50,7 +50,7 @@
             />
         <EditText
             android:layout_width="wrap_content"
-            android:layout_height="70dp"
+            android:layout_height="wrap_content"
             android:inputType="numberPassword"
             android:ems="10"
             android:id="@+id/nf_edittxt_03"
@@ -60,7 +60,7 @@
             />
         <EditText
             android:layout_width="wrap_content"
-            android:layout_height="70dp"
+            android:layout_height="wrap_content"
             android:inputType="numberPassword"
             android:ems="10"
             android:id="@+id/nf_edittxt_04"
@@ -117,6 +117,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center">
+
         <Button
             android:text="4"
             android:textSize="@dimen/note_form_txtsize"
@@ -129,6 +130,7 @@
             android:layout_marginBottom="@dimen/note_form_btn_margin_bottom"
             android:id="@+id/nf_btn_04"
             android:layout_marginRight="10dp"/>
+
         <Button
             android:text="5"
             android:textSize="@dimen/note_form_txtsize"
