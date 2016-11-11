@@ -2,6 +2,10 @@ package kr.co.yenglish.rednote.util;
 
 import android.content.Context;
 
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonParser;
+
 import java.util.HashMap;
 
 import kr.co.yenglish.rednote.Constants;
@@ -19,7 +23,7 @@ public class CommunicationUtils {
     private final String JOIN_ALREADY_ID = "USINGID";
 
     // Constants for LOGIN
-    private final String LOGIN_OK = "LoginOK";
+    private final String LOGIN_OK = "OK";
 
     // Constants for general case
     private final String RESULT_OK = "OK";
@@ -46,8 +50,28 @@ public class CommunicationUtils {
 
             String tempResult = HttpRequest.post(query).form(postData).body();
             Utils.log("Login result : "+ tempResult);
-        }catch(Exception err){
 
+            JsonElement jElement = new JsonParser().parse(tempResult);
+            JsonArray jArray = jElement.getAsJsonArray();
+
+            String result = jArray.get(0).getAsJsonObject().get("result").toString();
+
+            Utils.log("real result : "+ result);
+            if( LOGIN_OK.equals(ParseUtils.deleteQuatationFromJson(result)) ){
+                String name = jArray.get(0).getAsJsonObject().get("name").toString();
+                int depth = jArray.get(0).getAsJsonObject().get("depth").getAsInt();
+                isSucess = true;
+                Utils.setStringPreference(mContext, "uid", uid);
+                Utils.setStringPreference(mContext, "name", name);
+                Utils.setIntegerPreference(mContext, "depth", depth);
+
+            }else{
+                isSucess = false;
+            }
+
+        }catch(Exception err){
+            Utils.exceptionLog(err);
+            isSucess = false;
         }
 
         return isSucess;
