@@ -10,7 +10,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import kr.co.yenglish.rednote.MainActivity;
 import kr.co.yenglish.rednote.R;
 import kr.co.yenglish.rednote.util.CommunicationUtils;
 import kr.co.yenglish.rednote.util.Utils;
@@ -83,7 +82,8 @@ public class LoginForm extends AppCompatActivity{
             try{
                 if(result){
                     Utils.showLongToast(ctx, "로그인 성공");
-                    Intent intent = new Intent(LoginForm.this, MainActivity.class);
+                    Intent intent = new Intent(LoginForm.this, MainFormActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(intent);
                 }else{
                     Utils.showLongToast(ctx, "로그인 실패");
