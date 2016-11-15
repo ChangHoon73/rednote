@@ -12,10 +12,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.FrameLayout;
+import android.widget.TextView;
 
 import kr.co.yenglish.rednote.main.MainFormActivity;
 import kr.co.yenglish.rednote.main.NoteFormActivity;
 import kr.co.yenglish.rednote.member.MemberListActivity;
+import kr.co.yenglish.rednote.util.Utils;
 
 public class BaseDrawerActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -56,18 +58,18 @@ public class BaseDrawerActivity extends AppCompatActivity
 
         navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-//        View header=navigationView.getHeaderView(0);
-//        TextView user_txt = (TextView) header.findViewById(R.id.user_txt);
-//        String name = Utils.getStringPreference(this, "name").toString();
-//        Utils.log("name:"+name);
-//        user_txt.setText(name + " LogOut ");
-//        //View layoutid = this.findViewById(R.id.includeid);
-//        user_txt.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                BaseDrawerActivity.this.finish();
-//            }
-//        });
+        View header=navigationView.getHeaderView(0);
+        TextView user_txt = (TextView) header.findViewById(R.id.user_txt);
+        String name = Utils.getStringPreference(this, "name").toString();
+        Utils.log("name:"+name);
+        user_txt.setText(name + " LogOut ");
+        //View layoutid = this.findViewById(R.id.includeid);
+        user_txt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                BaseDrawerActivity.this.finish();
+            }
+        });
 
         //navigationView.getMenu().getItem(0).setChecked(true);
         //onNavigationItemSelected(navigationView.getMenu().getItem(0));
